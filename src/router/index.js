@@ -1,5 +1,4 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL), // 默认创建出来是createWebHistory，会造成无报错的页面白屏
@@ -7,7 +6,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: () => HomeView
+      component: () => import('../views/HomeView.vue') // 头部import进来后再在此次赋值打包预览后会出错
     },
     {
       path: '/about',
