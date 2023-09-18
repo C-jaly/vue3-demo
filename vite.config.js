@@ -6,7 +6,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: './', // 修改base路径来确保打包后dist文件下的index.html可以访问到JS
+  base: '/vue3-demo/', // 修改base路径来确保打包后dist文件下的index.html可以访问到JS
   plugins: [
     vue(),
     vueJsx(),
