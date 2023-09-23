@@ -1,6 +1,6 @@
 <script setup>
   import GrandSon from '../components/GrandSon.vue'
-  import { ref, computed, watch } from 'vue';
+  import { ref, computed, watch, inject } from 'vue';
 
   defineProps({
     value: Number,
@@ -9,6 +9,7 @@
   function CClickButton(v) {
     alert(`孙组件触发子组件传递的事件参数${v}`)
   }
+  const injectContent = inject('listItem', {});
 </script>
 
 <template>
